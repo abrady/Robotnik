@@ -1,0 +1,15 @@
+/ws/install/my_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/my_cpp_pkg
+/ws/install/my_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/my_cpp_pkg
+/ws/install/my_cpp_pkg/share/my_cpp_pkg/environment/ament_prefix_path.sh
+/ws/install/my_cpp_pkg/share/my_cpp_pkg/environment/ament_prefix_path.dsv
+/ws/install/my_cpp_pkg/share/my_cpp_pkg/environment/path.sh
+/ws/install/my_cpp_pkg/share/my_cpp_pkg/environment/path.dsv
+/ws/install/my_cpp_pkg/share/my_cpp_pkg/local_setup.bash
+/ws/install/my_cpp_pkg/share/my_cpp_pkg/local_setup.sh
+/ws/install/my_cpp_pkg/share/my_cpp_pkg/local_setup.zsh
+/ws/install/my_cpp_pkg/share/my_cpp_pkg/local_setup.dsv
+/ws/install/my_cpp_pkg/share/my_cpp_pkg/package.dsv
+/ws/install/my_cpp_pkg/share/ament_index/resource_index/packages/my_cpp_pkg
+/ws/install/my_cpp_pkg/share/my_cpp_pkg/cmake/my_cpp_pkgConfig.cmake
+/ws/install/my_cpp_pkg/share/my_cpp_pkg/cmake/my_cpp_pkgConfig-version.cmake
+/ws/install/my_cpp_pkg/share/my_cpp_pkg/package.xml

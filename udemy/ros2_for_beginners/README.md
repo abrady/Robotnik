@@ -18,3 +18,22 @@ sudo dnf install -y nvidia-container-toolkit            # pulls nvidia-ctk and h
     * source /opt/ros/jazzy/setup.bash
     * rviz2 &
     * 
+
+## making a package
+
+`ros2 pkg create my_py_pkg --build-type ament_python --dependencies `rclypy`
+* can also specify dependencies: --dependencies
+
+`colcon build`
+* builds it. you can run this in /ws and it'll recursively find package.xmls to build
+
+`colcon build --packages-select my_py_pkg`
+* this will build just my_py_pkg if you run it in /ws
+
+`ros2 pkg create my_cpp_pkg --build-type ament_cmake --dependencies rclcpp`
+
+
+## First Node
+
+/ws/src/my_py_package/my_first_node.py
+
