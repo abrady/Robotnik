@@ -23,21 +23,6 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive \
 ENV PIP_NO_CACHE_DIR=1 \
     PYTHONDONTWRITEBYTECODE=1
 
-# ---- nvidia container toolkit ----
-# https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker
-
-# RUN curl -s -L https://nvidia.github.io/libnvidia-container/stable/rpm/nvidia-container-toolkit.repo | \
-#  tee /etc/yum.repos.d/nvidia-container-toolkit.repo && \
-#  yum install -y nvidia-container-toolkit && \
-#  nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml && \
-#  nvidia-ctk cdi list
-
-RUN curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
-  && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
-    sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
-    tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
-
-
 # ENV MUJOCO_GL=osmesa        
 ENV MUJOCO_GL=egl
 # headless rendering
