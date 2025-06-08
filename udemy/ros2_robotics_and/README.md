@@ -43,3 +43,6 @@ sudo dnf install -y nvidia-container-toolkit            # pulls nvidia-ctk and h
 * `ros2 pkg list` : shows packages
 * `ros2 pkg executables <package>` : show what you can run
 * `ros2 run <package> <node>`
+* params:
+  * ros2 param list
+  * ros2 param set /node name val
