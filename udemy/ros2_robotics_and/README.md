@@ -32,8 +32,14 @@ sudo dnf install -y nvidia-container-toolkit            # pulls nvidia-ctk and h
 
 `ros2 pkg create my_cpp_pkg --build-type ament_cmake --dependencies rclcpp`
 
+## Documentation
+* workspace - `/ws` : the workspace where your packages live
+* package - `/ws/py_pubsub` : a 'package' that contains node definitions
+* node - `talker` or `listener`, a running instance
 
-## First Node
-
-/ws/src/my_py_package/my_first_node.py
-
+## Cheat Sheet
+* `source install/setup.bash` : set up ros2 with your packages in the workspace
+* `colcon build --symlink-install` : builds the projects
+* `ros2 pkg list` : shows packages
+* `ros2 pkg executables <package>` : show what you can run
+* `ros2 run <package> <node>`
