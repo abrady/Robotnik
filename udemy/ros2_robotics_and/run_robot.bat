@@ -1,0 +1,1 @@
+podman run --rm -it --device nvidia.com/gpu=all --security-opt label=disable --network host --ipc host -e DISPLAY=:0 -v /mnt/wslg/.X11-unix:/tmp/.X11-unix -v /mnt/wslg:/mnt/wslg -v ./robot_ws:/ws localhost/myros:jazzy-gpu bash

@@ -40,9 +40,18 @@ sudo dnf install -y nvidia-container-toolkit            # pulls nvidia-ctk and h
 ## Cheat Sheet
 * `source install/setup.bash` : set up ros2 with your packages in the workspace
 * `colcon build --symlink-install` : builds the projects
-* `ros2 pkg list` : shows packages
-* `ros2 pkg executables <package>` : show what you can run
+* ros2 pkg
+  * `ros2 pkg list` : shows packages
+  * `ros2 pkg executables <package>` : show what you can run
 * `ros2 run <package> <node>`
 * params:
   * ros2 param list
   * ros2 param set /node name val
+* urdf files
+  * link: root of a transform effectively.
+  * joint : joins two links
+
+## Making a Damned Robot
+* new ws: robot_ws
+* make a urdf file
+* make a launch/display.launch.py file

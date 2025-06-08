@@ -15,8 +15,7 @@ RUN usermod --shell /bin/bash root
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends \
-    curl ca-certificates build-essential neovim && \
-    rm -rf /var/lib/apt/lists/*
+    curl ca-certificates build-essential vim-tiny 
 
 ###############################################################################
 # 2. Rust toolchain  ─ bumps only when you change RUSTUP_INIT_ARGS
@@ -40,7 +39,7 @@ FROM rust AS tools
 RUN cargo install --locked zellij
 
 ###############################################################################
-# 4. Final image  ─ leave build tools behind (optional but small & clean)
+# 4. Final image  
 ###############################################################################
 FROM ros-base
 
@@ -50,6 +49,8 @@ COPY --from=os-prereqs /etc/passwd /etc/passwd
 # copy cargo + zellij binaries only
 COPY --from=rust  /root/.cargo  /root/.cargo
 COPY --from=tools /root/.cargo/bin/zellij /root/.cargo/bin/
+
+RUN sudo apt install -y ros-jazzy-joint-state-publisher-gui
 
 ENV PATH="/root/.cargo/bin:${PATH}"
 
